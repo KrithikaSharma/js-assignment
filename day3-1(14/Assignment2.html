@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Assignment 2 of 14/07/2020</title>
+        <h1>Program to show difference between var, let and const</h1>
+    </head>
+    <body>
+        <script>
+            //1. var: is used to declare something which can be accesed globally.
+            // var variable can be updated and re-declared within its scope.
+            var name='JavaScript';// name is scoped globally
+            console.log(name);
+            name='Python';// updating variable 'name'
+            console.log(name);
+            function local()
+            {
+                var localvar='5'; // localvar is scoped within function...accessing it outside displays an error msg saying 'loacalvar is not defined'.
+                console.log(localvar);
+            
+            }
+            local();
+            console.log(localvar);//error: since localvar is scoped within function'local()'.
+
+
+            //2. let: let is block scoped
+            //let can be updated but not re-defined
+            {
+                let value=100;
+                console.log(value);//value is accessible only inside {}.
+
+                value='250';//updating
+                let value=250;//re-declaring....will throw an error
+            }
+
+            //3. const: this have fixed valued n only accessed within a block.
+            // const can neither be updated nor re-declared.
+
+            const pi=3.14;
+            pi=5;// this will throw an error;
+
+        </script>
+    </body>
+</html>
