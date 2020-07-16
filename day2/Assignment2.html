@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 of Day 2</title>
+    <h2>Program to show the methods of String and Array. </h2>
+</head>
+<body>
+    <script>
+        let str="This is assignment 2 of Day 2";
+        let str1="this is string method";
+        let txt="    good morning!     ";
+
+        //charAt():	Returns the character at the specified index (position)
+        console.log(str.charAt(10));
+
+        //charCodeAt()	Returns the Unicode of the character at the specified index
+        console.log(str.charCodeAt(10));
+
+        //concat()	Joins two or more strings, and returns a new joined strings
+        console.log(str.concat( str1))
+
+        //endsWith()	Checks whether a string ends with specified string/characters
+        console.log(str.endsWith("Day 2"))
+
+        //includes()	Checks whether a string contains the specified string/characters
+        console.log(str.includes("hi"))//in this it includes hi hence showing true
+
+        //indexOf()	Returns the position of the first found occurrence of a specified value in a string
+        console.log(str.indexOf('s'));
+
+        //lastIndexOf()	Returns the position of the last found occurrence of a specified value in a string
+        console.log(str.lastIndexOf('s'));
+
+       //repeat()	Returns a new string with a specified number of copies of an existing string
+       console.log(txt.repeat(3));
+
+       //replace()	Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
+       console.log(txt.replace("morning","Afternoon"))
+
+       //search()	Searches a string for a specified value, or regular expression, and returns the position of the match
+       console.log(str.search("assignment"));
+
+      //substr()	Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+          console.log(str.substr(1,10))
+
+       //toLowerCase()	Converts a string to lowercase letters
+       console.log(str.toLowerCase())
+
+       //toUpperCase()	Converts a string to uppercase letters
+       console.log(str.toUpperCase())
+
+       //substring()	Extracts the characters from a string, between two specified indices
+       console.log(str.substring(1,10))
+
+       //toString()	Returns the value of a String object
+       console.log(str.toString())
+
+       //valueOf()	Returns the primitive value of a String object
+       console.log(str.valueOf())
+
+       //trim()	Removes whitespace from both ends of a string
+       console.log(txt.trim())
+
+       //slice()	Extracts a part of a string and returns a new string
+       console.log(str.slice(1,10))
+
+       //split()	Splits a string into an array of substrings
+       console.log(str.split(" "))
+    </script>
+    
+</body>
+</html>
