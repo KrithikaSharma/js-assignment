@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+</head>
+<body>
+    <script>
+        console.log("Question 5");
+        let sales=Number(prompt("enter  employee's sales"));
+        let commission;
+        if(sales>0 && sales<=5000)
+        {
+            commission=(2/100)*(sales);
+            console.log(`The commission of the employee is 2% of his sales i.e, 2% of ${sales}=${commission}`);
+        }
+        
+        else if(sales>5001 && sales<=10000)
+        {
+            commission=(5/100)*(sales);
+            console.log(`The commission of the employee is 5% of his sales i.e, 5% of ${sales}=${commission}`);
+        }        
+        
+        else if(sales>10001 && sales<=20000)
+        {
+            commission=(7/100)*(sales);
+            console.log(`The commission of the employee is 7% of his sales i.e, 7% of ${sales}=${commission}`);
+        }           
+        
+        else
+        {
+            commission=(10/100)*(sales);
+            console.log(`The commission of the employee is 10% of his sales i.e, 10% of ${sales}=${commission}`);
+        }    
+    </script>
+    
+</body>
+</html>
