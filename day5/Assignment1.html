@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+<body>
+    <script>
+        console.log(" Question 1")
+        let limit=Number(prompt("Enter the number of elements the array can hold"));
+        let i;
+        let arr=[];
+        console.log("Enter elements")
+        for(i=0;i<limit;i++)
+        {
+            arr[i]=Number(prompt(`enter ${i+1} element`));
+        }
+        console.log(arr);
+        let odd= arr.filter(ele=>ele %2 !=0);
+        console.log(odd);
+
+        let oddcubes=arr.filter(ele=>ele %2 !=0).map(el=>el**3)
+        console.log(oddcubes);
+
+
+</script>
+</body>
+</html>

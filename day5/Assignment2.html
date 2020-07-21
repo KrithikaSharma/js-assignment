@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <script>
+        console.log(" Question 2");
+        class User
+        {
+            constructor(name,age,email)
+            {
+                this.name=name;
+                this.age=age;
+                this.email=email;
+                this.coins=0;
+                this.courses=[];
+            }
+            login()
+            {
+                console.log(`${this.name} has logged in`);
+            }
+            logout()
+            {
+                console.log(`${this.name} has logged out`);
+            }
+            addCoins(num)
+            {
+                coins=coins+num;
+                console.log(`${this.user} has ${this.coins=num}`)
+            }
+            details()
+            {
+                console.log(`${this.name} is ${this.age} old and has ${this.coins} coins`);
+            }
+
+        }
+        class Moderator extends User
+        {
+            addCoins(user,coins)
+            {
+                this.coins=coins;
+            }
+            removeCoins(user,coins)
+            {
+                this.coins=coins-5;
+            }
+        }
+        class Admin extends Moderator
+        {
+            addCourse(user,course)
+            {
+                user.courses.push(course);
+                console.log(user);
+            }
+            deleteCourse(user,course)
+            {
+                user.courses.pop(course);
+            }
+        }
+
+
+
+
+        let userobj1= new User('Sachin',20,'sachin20@gmail.com');
+        let userobj2= new User('Anjali',21,'anjali21@gmail.com');
+        let userobj3= new User('shweta',18,'shweta@gmail.com');
+        
+        let modobj= new Moderator('Bob',25,'bob@gmail.com');
+        modobj.addCoins();
+        modobj.removeCoins()
+
+        let adminobj= new Admin('Charlie',23,'charlie@gmail.com');
+        // userobj1.login();
+        // userobj1.details();
+        // userobj1.logout();
+         let usersarr=[userobj1,userobj2,userobj3,modobj,adminobj];
+        console.log(usersarr);
+        usersarr.forEach(ele=> console.log(ele));
+        adminobj.addCourse(userobj3,'Blockchain')//adding course to user3
+        adminobj.addCourse(userobj2,'Blockchain')
+        adminobj.addCourse(userobj2,'Python');
+        adminobj.deleteCourse(userobj2,'Blockchain')//removing blockchain coursefrom user2
+
+
+        modobj.addCoins(userobj1,50);
+        modobj.removeCoins(userobj1,100);
+    </script>
+</body>
+</html>
